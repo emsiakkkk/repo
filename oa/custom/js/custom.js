@@ -1,4 +1,4 @@
-indiplatform.loadResources(["app-duban/duban.js"])
+// indiplatform.loadResources(["app-duban/duban.js"])
  //决议督办
 angular.module('indiplatform.custom', ['duban'])
 .config(function(indiConfigProvider){

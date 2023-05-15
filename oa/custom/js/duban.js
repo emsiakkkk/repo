@@ -1,0 +1,2 @@
+indiplatform.loadResources(["app-duban/home/custom_home.js","app-duban/mission/custom_mission.js","app-duban/search/custom_search.js","app-duban/css/custom_duban.css"])
+angular.module('duban', ['duban.search','duban.home','duban.mission'])

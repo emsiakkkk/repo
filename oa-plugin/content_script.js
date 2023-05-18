@@ -1,14 +1,12 @@
 (function() {
 
-  // var ifAngularhasDefined = false
-  while (typeof angular == 'undefined');;
+  // while (typeof angular == 'undefined');;
 
   var app = angular.module('indiplatform.domino');
   app.config(['$provide', function($provide) {
     $provide.decorator('$imNotesName', [
       '$delegate',
       function $imNotesNameDecorator($delegate) {
-        // console.log($delegate);
 
         function _toRealName(str) {
           if (/\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]/g.test(str)) {
@@ -32,7 +30,7 @@
         }
 
         $delegate.toRealName = _toRealName;
-
+        console.log('$imNotesName.toRealName() has been overrided.');
         return $delegate;
       }])
   }])
